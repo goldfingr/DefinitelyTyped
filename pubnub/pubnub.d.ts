@@ -21,7 +21,7 @@ declare namespace PubNubLibrary {
 
 
     interface SubscribeParams {
-        channel?: Array<string>;
+        channels?: Array<string>;
         channelGroups?: Array<string>;
         withPresence?: boolean;
     }
