@@ -3,21 +3,15 @@
 // Definitions by: Goldfingr
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-declare namespace ReactNativeSMSLibrary {
-
+declare module "react-native-sms" {
     interface SendParams {
         body?: string;
         recipients?: Array<string>;
         successTypes?: Array<string>;
     }
 
-
-    interface ReactNativeSMSClass {
-        send(options: SendParams, callback?: (completed, cancelled, error) => void): void;
-    }
-}
-
-declare module "react-native-sms" {
-    let ReactNativeSMS: ReactNativeSMSLibrary.ReactNativeSMSClass;
-    export = ReactNativeSMS;
+    export function send(
+        options: SendParams,
+        callback?: (completed, cancelled, error) => void
+    ): void;
 }
